@@ -7,14 +7,17 @@ Step1: install nginx server
   - sudo apt install nginx
 * Cấu hình hạn chế lưu lượng truy cập cho nginx
   - sudo ufw allow 'Nginx HTTP'
+    
 Step2: Install mysql
   - sudo apt install mysql-server
   - sudo mysql_secure_installation
 * Note: nếu password đang là mặc định của mysql server thì thực hiện change password
   https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password-on-ubuntu-20-04
   - chạy lệnh mysql -u root -p để test kết nối và tạo database(create database example;)
+    
 Step3: Install php
   - sudo apt install php-fpm php-mysql
+    
 Step4: config nginx to use php process
   - sudo mkdir /var/www/example
   - cd /var/www/example -> git clone link_project
